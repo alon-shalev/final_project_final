@@ -193,6 +193,7 @@ a {
        transition: 0.8s ;
        top: 90%;
        right: 10%;
+       
     }
 
     .nav_categories.changeIt {
@@ -200,6 +201,7 @@ a {
         opacity: 100%;
        
         transition: 0.8s ;
+        background-color: white;
         
     }
 
