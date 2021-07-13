@@ -52,9 +52,10 @@ header {
 
 }
 
-.nav-container .logo:hover {
+.nav-container .logo .logo-A:hover{
     transition: 0.8s;
-    font-size: 2.3rem;
+   color:#009845 ;
+   font-size: 2.3rem;
 }
 
 .AnnouncementBar:hover {
@@ -70,7 +71,8 @@ a {
 .nav-container a:hover {
     color: #009845;
     transition: 0.8s;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
+    
 }
 
 .top-button .main-button:hover {
