@@ -69,3 +69,34 @@ let line=document.querySelector('.line');
 
  });
 
+
+
+
+
+//  popup 
+let popup = document.querySelector('.popup');
+let close = document.querySelector('#close');
+
+window.addEventListener("load",function(){
+  showPopUp();
+});
+
+
+
+function showPopUp(){
+  let timelimit = 5 ;
+  let i = 0;
+
+const timer = setInterval(function(){
+i++;
+if(i == timelimit){
+  clearInterval(timer);
+  popup.classList.add("show");
+}
+console.log(i);
+},1000);
+}
+
+close.addEventListener("click",function(){
+  popup.classList.remove("show");
+})
