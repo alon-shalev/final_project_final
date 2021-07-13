@@ -778,8 +778,8 @@ a {
 }
 
 .instagram-slider {
-    margin-top: 120px;
-    margin-bottom: 15%;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
     max-width: 100%;
     display: flex;
     justify-content: center;
@@ -799,7 +799,7 @@ a {
 
 
 .column i {
-    top: 150%;
+    top: 100%;
     color: #ffffff;
 
     padding: 5px;
@@ -883,7 +883,7 @@ a {
     height: 100%;
     position: relative;
     z-index: 1000;
-margin-top: 200px;
+
 
 
 }
