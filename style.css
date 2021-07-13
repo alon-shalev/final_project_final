@@ -12,6 +12,13 @@ body {
 
 }
 
+.background_image {
+    position: absolute;
+    z-index: -1;
+
+
+}
+
 img {
     width: 100%;
     height: auto;
@@ -49,6 +56,7 @@ header {
     align-items: center;
     position: relative;
     height: 50px;
+    margin-top: 10px;
 
 }
 
@@ -80,16 +88,52 @@ a {
     font-size: 2.3rem;
 }
 
+.images {
+    position: relative;
+    overflow: auto;
+
+}
+
+.first-images a {
+    color: #009845;
+}
+
+.first-images-j a {
+    color: #009845;
+}
+
+
+.first-images p {
+    color: #ffff;
+}
+
+.first-images-j p {
+    color: #ffff;
+
+}
+
 .images a:hover {
     transition: 0.8s;
     color: #009845;
     font-size: 1.2rem;
 }
 
+
 .images button:hover {
     transition: 0.8s;
-    color: #009845;
+    color: #ffff;
     font-size: 1.6rem;
+
+}
+
+.images button {
+    transition: 0.8s;
+    color: #ffff;
+    font-size: 1.6rem;
+    background-color: #009845;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .nav-container .logo {
@@ -137,11 +181,12 @@ a {
 }
 
 .under-line {
-    border: 1px solid #F1EBDE;
+    /* border: 1px solid #F1EBDE; */
     height: 5px;
     width: 250px;
     top: 75%;
     left: 1.75%;
+
     background: linear-gradient(90deg, #009845 9.37%, #0a78db 26.04%, #7927c8 42.71%, #e62000 58.33%, #ff7b02 75%, #fdcb05 91.15%);
 
     /*background: linear-gradient(90deg, #ff5c77, #4dd091, #ffec59, #ffa23a);*/
@@ -184,7 +229,7 @@ a {
 
     .line {
         width: 100%;
-        height: 2px;
+        height: 3px;
         background-color: black;
         border-radius: 12px;
         margin: auto;
@@ -267,6 +312,7 @@ a {
     display: flex;
     text-align: center;
     font-size: 30px;
+    color: #ffff;
 
 
 
@@ -327,13 +373,18 @@ button {
 @media screen and (max-width: 767px) {
 
     .images {
-        flex-direction: column;
+        flex-direction: row;
+        /* overflow: normal; */
+
+
 
     }
 
-    .first-images-j {
+
+
+    /* .first-images-j {
         display: none;
-    }
+    } */
 
 
 }
@@ -1208,19 +1259,23 @@ a:hover {
     .product_div_conteiner {
         display: flex;
         flex-direction: column;
+
         align-items: center;
         justify-content: center;
         text-align: center;
         width: 100%;
         z-index: 1;
-        padding-top: 50%;
+        padding-top: 30%;
+
+
+
 
 
     }
 
     .product_div_conteiner .bread_crubs {
         top: 7%;
-        left: 1%;
+        left: 10%;
 
 
     }
@@ -1228,7 +1283,7 @@ a:hover {
     .proudact-details .proudact_title {
         position: absolute;
         top: 7.5%;
-        left: 1%;
+        left: 10%;
         display: flex;
         flex-direction: column;
         font-size: 0.8rem;
@@ -1253,7 +1308,8 @@ a:hover {
 
 }
 
-.Hamburger {
+
+/* .Hamburger {
     width: 55px;
     height: 50px;
     position: fixed;
@@ -1269,7 +1325,7 @@ a:hover {
 
     margin-right: 25px;
     display: none;
-}
+} */
 
 /*  this is a comment fot us to see if git is working */
 
