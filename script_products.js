@@ -8,8 +8,8 @@ let shirt={
     img:"jeans.jpg",
     price: 49
   };
-  let jeans={
+  let product={
     code:3,
-    img:"jeans.jpg",
+    img:"cher.jpg",
     price: 79
   };

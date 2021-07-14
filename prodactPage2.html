@@ -36,6 +36,14 @@
 
 
 
+            <button class="hamburger" id="btn">
+
+
+                <div class="line line-one"></div>
+                <div class="line line-two"></div>
+                <div class="line line-three"></div>
+            </button>
+
 
             <div class="nav_categories">
                 <a href="" target="">
@@ -68,9 +76,12 @@
             <div id="shopping" class="shopping_cart">
 
                 <h5>order summery:</h5>
+                <!-- cart item -->
                 <ul class="proudact_list">
 
                 </ul>
+                <!--end cart item -->
+
                 <p class="total"></p>
                 <button id="check_out">proceed to checkout</button>
 
@@ -97,7 +108,7 @@
         <div class="proudact-details">
             <h3 class="proudact_title">
                 TIMFS Tai Dai shirt - rainbow
-                $<span>49.00</span>
+                <span class="productPrice">49.00</span>
             </h3>
             <p>
                 Or 4 interest-free installments of $19.75 by AFTERPAY
@@ -146,7 +157,7 @@
                 <option>7</option>
                 <option>8</option>
             </select>
-            <button id="add_to_bag" class="add_to_bag">ADD TO BAG</button>
+            <button id="add_to_bag" data-product-id='2' class="add_to_bag">ADD TO BAG</button>
             <h5> <strong>DETAILS:</strong></h5>
             <p>
 
@@ -245,12 +256,38 @@
         </div>
 
     </div>
+    <!-- pop starting  -->
+    <div class="popup">
+        <div class="box">
+
+
+
+
+            <h4 id="close">Maybe Later</h4>
+
+
+            <div class=" inside_popup">
+
+                <h3 class="title">FOR THE LATEST NEWS AND SPECIAL DEALS</h3>
+                <input type="text" placeholder="YOUR EMAIL " id="email">
+
+                <button type="subscribe">
+
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </button>
+
+            </div>
+        </div>
+    </div>
+    <!-- End of popup -->
+
+
     <footer>
         <div class="footer">
             <div class="top-footer">
                 <div class="footer-container">
                     <div class="contact">
-                        <h1>CONTACT US</h1><br>
+                        <h1> <a href="http://127.0.0.1:5500/contact.html">CONTACT US</a></h1><br>
                         <div class="logo">
                             TIMFS
                         </div>
@@ -333,6 +370,8 @@
     </footer>
 
 </body>
+
 <script src="script.js"></script>
+
 
 </html>

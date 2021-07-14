@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -68,14 +69,32 @@
                 </a>
                 <a href="" target="">
                     <i id="cart" class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    <span class="cart_amount">0</span>
+
                 </a>
             </div>
 
+            <!-- start shopping cart -->
+            <div id="shopping" class="shopping_cart">
+                <div class="close-cart">
+                    <i class="fas fa-window-close"></i>
+                    <h5>order summery:</h5>
+                    <ul class="proudact_list">
+
+                    </ul>
+                    <p class="total"></p>
+                    <button id="check_out">proceed to checkout</button>
+
+
+
+                </div>
+                <!-- End of shopping cart -->
+
+
+            </div>
             <div class="under-line">
 
             </div>
-
-        </div>
 
     </header>
 
@@ -149,6 +168,8 @@
                     <img src="58338161_023_d.jpg">
                     <h5>NEW COLLECTION</h5>
                     <p>top seller jucket of this seson dont miss it! last piceces</p>
+                    <button id="add_to_bag" data-product-id='3' class="add_to_bag">ADD TO BAG</button>
+
                     <div class="dots">
                         <div class="red-dot">
 
@@ -174,6 +195,8 @@
                     <img src="blacklady.jpg">
                     <h5>NEW COLLECTION</h5>
                     <p>top seller jucket of this seson dont miss it! last piceces</p>
+                    <button id="add_to_bag" data-product-id='4' class="add_to_bag">ADD TO BAG</button>
+
                     <div class="dots">
                         <div class="red-dot">
 
@@ -199,6 +222,8 @@
                     <img src="baggy-mekufteret.jpg">
                     <h5>NEW COLLECTION</h5>
                     <p>top seller jucket of this seson dont miss it! last piceces</p>
+                    <button id="add_to_bag" data-product-id='5' class="add_to_bag">ADD TO BAG</button>
+
                     <div class="dots">
                         <div class="red-dot">
 
@@ -224,6 +249,8 @@
                     <img src="blu-j_1.jpg">
                     <h5>NEW COLLECTION</h5>
                     <p>top seller jucket of this seson dont miss it! last piceces</p>
+                    <button id="add_to_bag" data-product-id='6' class="add_to_bag">ADD TO BAG</button>
+
                     <div class="dots">
                         <div class="red-dot">
 
@@ -274,6 +301,8 @@
                     <img src="taidai.jpg">
                     <h5>NEW COLLECTION</h5>
                     <p>top seller jucket of this seson dont miss it! last piceces</p>
+                    <button id="add_to_bag" data-product-id='7' class="add_to_bag">ADD TO BAG</button>
+
                     <div class="dots">
                         <div class="red-dot">
 
@@ -345,6 +374,8 @@
                     <img src="cher.jpg">
                     <h5>NEW COLLECTION</h5>
                     <p>top seller jucket of this seson dont miss it! last piceces</p>
+                    <button id="add_to_bag" data-product-id='8' class="add_to_bag">ADD TO BAG</button>
+
                     <div class="dots">
                         <div class="red-dot">
 
@@ -370,6 +401,8 @@
                     <img src="miroor.jpg">
                     <h5>NEW COLLECTION</h5>
                     <p>top seller jucket of this seson dont miss it! last piceces</p>
+                    <button id="add_to_bag" data-product-id='9' class="add_to_bag">ADD TO BAG</button>
+
                     <div class="dots">
                         <div class="red-dot">
 
@@ -395,6 +428,8 @@
                     <img src="ner.jpg">
                     <h5>NEW COLLECTION</h5>
                     <p>top seller jucket of this seson dont miss it! last piceces</p>
+                    <button id="add_to_bag" data-product-id='10' class="add_to_bag">ADD TO BAG</button>
+
                     <div class="dots">
                         <div class="red-dot">
 
@@ -420,6 +455,8 @@
                     <img src="shtiach.jpg">
                     <h5>NEW COLLECTION</h5>
                     <p>top seller jucket of this seson dont miss it! last piceces</p>
+                    <button id="add_to_bag" data-product-id='11' class="add_to_bag">ADD TO BAG</button>
+
                     <div class="dots">
                         <div class="red-dot">
 
@@ -633,14 +670,8 @@
     <div class="popup">
         <div class="box">
 
-            <div id="overlay">
-            </div>
+            <h4 id="close">Maybe Later</h4>
 
-            <div id="close">
-
-                <h4>Maybe Later</h4>
-
-            </div>
             <div class="inside_popup">
 
                 <h3 class="title">FOR THE LATEST NEWS AND SPECIAL DEALS</h3>
@@ -655,14 +686,14 @@
         </div>
     </div>
     <!-- End of popup -->
-
+    <!---->
 
     <footer>
         <div class="footer">
             <div class="top-footer">
                 <div class="footer-container">
                     <div class="contact">
-                        <h1>CONTACT US</h1><br>
+                        <h1> <a href="http://127.0.0.1:5500/contact.html">CONTACT US</a></h1><br>
                         <div class="logo">
                             TIMFS
                         </div>
@@ -688,7 +719,7 @@
                         <a href="">Shipping</a>
                         <br>
 
-                        <a href="">Contact us</a>
+                        <a href="http://127.0.0.1:5500/contact.html">Contact us</a>
                     </div>
 
                     <div class="newsletter">
@@ -738,16 +769,11 @@
         </div>
 
 
-        </div>
-
-        </div>
-
     </footer>
-    <!-- popup -->
 
 
 
-    <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 
 </html>
