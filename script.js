@@ -72,8 +72,7 @@ let line=document.querySelector('.line');
 
 
 
-
-//  popup 
+// //  popup 
 let popup = document.querySelector('.popup');
 let close = document.querySelector('#close');
 
@@ -87,7 +86,7 @@ function showPopUp(){
   let timelimit = 5 ;
   let i = 0;
 
-const timer = setInterval(function(){
+let timer = setInterval(function(){
 i++;
 if(i == timelimit){
   clearInterval(timer);
@@ -99,4 +98,5 @@ console.log(i);
 
 close.addEventListener("click",function(){
   popup.classList.remove("show");
-})
+});
+
