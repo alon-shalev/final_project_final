@@ -104,3 +104,18 @@ close.addEventListener("click",function(event){
   popup.classList.remove("show");
 });
 
+let switchImg = document.querySelectorAll('.box');
+let imgThumb = document.querySelector('.thumb-img"');
+imgThumb.addEventListener("click",changeImage());
+
+
+function changeImage(event){
+  preventDefault(event);
+
+  for(let i = 0; i< switchImg.length;i++){
+    console.log(event.switchImg[i]);
+    // switchImg.classList.add('active');
+  }
+  
+
+}
