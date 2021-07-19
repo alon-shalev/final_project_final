@@ -882,7 +882,7 @@ a {
 
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 60px;
+    margin-bottom: 10%;
     align-items: center;
     position: relative;
 
@@ -1220,7 +1220,8 @@ a:hover {
 }
 
 .product_div_conteiner .proudact-details {
-    width: 50%;
+    width: 100%;
+    margin-right: 100px;
 }
 
 .proudact-details {
@@ -1232,6 +1233,7 @@ a:hover {
 @media screen and (max-width:767px) {
     .product_div_conteiner .proudact-details {
         width: 80%;
+        margin: auto;
     }
 }
 
@@ -1454,8 +1456,8 @@ a:hover {
 }
 
 #thumb-img {
-    width: 87px;
-
+    width: 25%;
+    padding: 3px;
 
     display: flex;
     margin: auto;

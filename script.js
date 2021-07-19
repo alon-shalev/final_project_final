@@ -13,8 +13,8 @@ cartBtn.addEventListener('click', function (event) {
 
 let addToCartBTN = document.querySelector('#add_to_bag');
 addToCartBTN.addEventListener('click', addToCart);
-
- let products =JSON.parse(localStorage.getItem('products'));
+let products=[];
+  products =JSON.parse(localStorage.getItem('products'));
 function addToCart(event) {
   event.preventDefault();
 
@@ -34,7 +34,7 @@ function addToCart(event) {
 
   // products.push(product);
 
-  localStorage.setItem('products',JSON.stringify(product))
+  localStorage.setItem('products',JSON.stringify(product));
   let prodactImg=document.querySelector('img').src;//שליפה של התמונה
   
   let productName=document.querySelector('.proudact_title').innerHTML;
@@ -42,6 +42,7 @@ function addToCart(event) {
 
   //שאלה לאלכס
 //הוספה לסל של פריט קיים , העלאת המחיר בהתאם לכמות
+
 
 let productTemplet=` <li>
 <h3>${productName}</h3>
@@ -54,8 +55,19 @@ let productTemplet=` <li>
 </div>
 </li>`;
 let listOfP=document.querySelector('.proudact_list');
-listOfP.innerHTML+=productTemplet;
-console.log(productTemplet);
+  listOfP.innerHTML+=productTemplet;
+  console.log(productTemplet);
+
+
+
+  // this function will check if current id appears in cart-its not finished!
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach(function(button){
+    button.onclick = function(event){
+      console.log(event.target);
+    }
+  });
+
 
 };
 let navMenu = document.querySelector('.nav_categories');
@@ -64,7 +76,6 @@ let secondLine =document.querySelector('.line-two');
 let thirdLine =document.querySelector('.line-three');
 let line=document.querySelector('.line');
 
-// let btn = document.getElementById('#btn');
  btn.addEventListener("click",function(event){
      navMenu.classList.toggle("changeIt");
      firstLine.classList.toggle("changeIt");
@@ -81,12 +92,6 @@ let line=document.querySelector('.line');
 //  switch images 
 
 function changeImage(event){
-  
-
-  // for(let i = 0; i< switchImg.length;i++){
-  //   console.log(event.switchImg[i]);
-  //   // switchImg.classList.add('active');
-  // }
   
   var targetElement = event.target;
   document.getElementById("mainImg").src = targetElement.getAttribute("src")
