@@ -6,28 +6,33 @@ let products=[
 },
 {
     code:2,
-    img:"jeans.jpg",
+    img:"58338161_023_d.jpg",
     price: 49
   },
   {
     code:3,
-    img:"cher.jpg",
-    price: 79
+    img:"blacklady.jpg",
+    price: 89
   },
   {
     code:4,
-    img:"jeans.jpg",
+    img:"baggy-mekufteret.jpg",
     price: 79
   },
   {
       code:5,
-      img:"jeans.jpg",
-      price: 49
+      img:"miroor.jpg",
+      price: 120
     },
     {
       code:6,
       img:"cher.jpg",
-      price: 79
+      price: 100
+    },
+    {
+      code:7,
+      img:"ner.jpg",
+      price: 12
     }
  
 

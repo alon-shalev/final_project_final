@@ -84,8 +84,25 @@ let line=document.querySelector('.line');
 
  });
 
+let index=0;
+let clicked=document.querySelector('.photo-box');
+let chosen_product= document.querySelector('.photo-box img').src;
+console.log(chosen_product);
+clicked.addEventListener("click",function(){
+for(let i=0;i<productsArry.length;i++){
+  
+  if(chosen_product==productsArry[i].img){
+   index=i;
+   console.log(index);
+  }
+}
 
-
+let productPageImg=productsArry[index].img;
+let productPagePrice=productsArry[index].price;
+let setImg=document.querySelector('.gallery-main-img');
+setImg.innerHTML=`<img src=${productPageImg}>`;
+location.href="productPage.html";
+});
 
 
 
@@ -129,11 +146,43 @@ function changeImage(event){
 // // let switchImg = document.querySelectorAll('.box');
 // // imgThumb.addEventListener("click",changeImage());
 
-<<<<<<< Updated upstream
-=======
-}
 
-if(listOfP!=undefined){
-  document.querySelector('.proudact_list').innerHTML=listOfP;
-}
->>>>>>> Stashed changes
+let productsArry=[
+  {
+    code:1,
+    img:"jeans.jpg",
+    price: 79
+  },
+  {
+      code:2,
+      img:"58338161_023_d.jpg",
+      price: 49
+    },
+    {
+      code:3,
+      img:"blacklady.jpg",
+      price: 89
+    },
+    {
+      code:4,
+      img:"baggy-mekufteret.jpg",
+      price: 79
+    },
+    {
+        code:5,
+        img:"miroor.jpg",
+        price: 120
+      },
+      {
+        code:6,
+        img:"cher.jpg",
+        price: 100
+      },
+      {
+        code:7,
+        img:"ner.jpg",
+        price: 12
+      }
+   
+  
+  ]
