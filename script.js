@@ -99,8 +99,9 @@ for(let i=0;i<productsArry.length;i++){
 
 let productPageImg=productsArry[index].img;
 let productPagePrice=productsArry[index].price;
-let setImg=document.querySelector('.gallery-main-img');
-setImg.innerHTML=`<img src=${productPageImg}>`;
+document.querySelector('#mainImg').src= productPageImg;
+
+
 location.href="productPage.html";
 });
 
