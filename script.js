@@ -32,7 +32,7 @@ function addToCart(event) {
     quantity: qty
   }
 
-  // products.push(product);
+  
 
   localStorage.setItem('products',JSON.stringify(product));
   let prodactImg=document.querySelector('img').src;//שליפה של התמונה
@@ -129,3 +129,11 @@ function changeImage(event){
 // // let switchImg = document.querySelectorAll('.box');
 // // imgThumb.addEventListener("click",changeImage());
 
+<<<<<<< Updated upstream
+=======
+}
+
+if(listOfP!=undefined){
+  document.querySelector('.proudact_list').innerHTML=listOfP;
+}
+>>>>>>> Stashed changes
