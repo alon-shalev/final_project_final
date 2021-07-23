@@ -85,9 +85,12 @@ let line=document.querySelector('.line');
  });
 
 let index=0;
+// let clicked=document.querySelector('.gallery-main-img');
+
 let clicked=document.querySelector('.photo-box');
-let chosen_product= document.querySelector('.photo-box img').src;
+let chosen_product= document.querySelector('.photo-box img');
 console.log(chosen_product);
+
 clicked.addEventListener("click",function(){
 for(let i=0;i<productsArry.length;i++){
   
@@ -99,7 +102,7 @@ for(let i=0;i<productsArry.length;i++){
 
 let productPageImg=productsArry[index].img;
 let productPagePrice=productsArry[index].price;
-document.querySelector('#mainImg').src= productPageImg;
+document.querySelector('img').src= productPageImg;
 
 
 location.href="productPage.html";
