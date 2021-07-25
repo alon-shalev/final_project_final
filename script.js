@@ -70,6 +70,8 @@ let listOfP=document.querySelector('.proudact_list');
 
 
 };
+
+
 let navMenu = document.querySelector('.nav_categories');
 let firstLine =document.querySelector('.line-one');
 let secondLine =document.querySelector('.line-two');
