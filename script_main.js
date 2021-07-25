@@ -423,5 +423,13 @@ close.addEventListener("click",function(event){
 // // imgThumb.addEventListener("click",changeImage());
 
 
+
+
+let clicked = document.querySelector('.photo-box h3');
+
+clicked.addEventListener("click", function(event){
+    preventDefault();
+    console.log("cliecked");
+})
 onLoadCartNumbers();
 displayCart();
