@@ -1486,6 +1486,7 @@ a .add-cart {
     display: flex;
     /* //max-width: 500px; */
     margin: auto;
+    position: relative;
 
 }
 
@@ -1652,21 +1653,44 @@ a .add-cart {
 }
 /* comments*/
 .comments{
+    width: 50%;
+    border: 4px solid #009845;
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-size: 0.8rem;
     justify-content: space-evenly;
+   position: absolute;
+   top: 140%;
+   left:5%;
+   
+   
 }
 .outputs{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 25vw;
+    
+    overflow-y: auto;
 }
 .inputs{
     display: flex;
     flex-direction: column;
+
+
 }
 .wirrtenComants{
-   
+    list-style: none;
 }
+.comment_input{
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+   .name-input{
+    font-family: 'Montserrat', sans-serif;   
+   }
+   #add-comment{
+    font-family: 'Montserrat', sans-serif; 
+   }

@@ -389,12 +389,16 @@ let line=document.querySelector('.line');
 
  });
 // ----end of hamburger menu --
-let comment_namee=document.querySelector('.name-input').values;
-let comment_text=document.querySelector('.comment_input').values;
+
 let comment_btn=document.querySelector('#add-comment');
+let comment_namee;
+let comment_text;
 comment_btn.addEventListener('click',function(event){
    event.preventDefault();
-    console.log(comment_namee)
+   console.log(event)
+   let comment_namee=document.querySelector('.name-input').value;
+    let comment_text=document.querySelector('.comment_input').value;
+    console.log(document.querySelector('.name-input').values)
     console.log(comment_text)
    document.querySelector('.added-comment .comment-name').innerHTML=comment_namee;
    document.querySelector('.added-comment .comments-words').innerHTML=comment_text;
