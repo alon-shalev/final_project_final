@@ -455,12 +455,10 @@ let line=document.querySelector('.line');
 // console.log(i);
 // },1000);  }
 
-<<<<<<< HEAD
 // close.addEventListener("click",function(_event){
 //   popup.classList.remove("show");
 // });
-=======
->>>>>>> Stashed changes
+
 //  // this function will check if current id appears in cart-its not finished!
 //  const buttons = document.querySelectorAll("button");
 //  buttons.forEach(function(button){
@@ -469,14 +467,11 @@ let line=document.querySelector('.line');
 //    }
 //  });
 // // ---end of shopping cart - not finished!
-<<<<<<< Updated upstream
 
 //popup
 let popup = document.querySelector('.popup');
 let close = document.querySelector('#close');
-=======
->>>>>>> f99fd56538e4147c60f1f46d65dd1cedd16ce463
->>>>>>> Stashed changes
+
 
 // //endPopup
 
