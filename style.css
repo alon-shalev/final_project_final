@@ -1729,6 +1729,11 @@ a .add-cart {
    
    
 }
+@media screen and (max-width: 769px){
+    .comments{
+        display: none;
+    }
+} 
 .outputs{
     display: flex;
     flex-direction: row;
@@ -1813,4 +1818,5 @@ button.primaryContained:hover {
     width: 80%;
 
 }
+
 

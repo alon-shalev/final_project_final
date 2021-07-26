@@ -67,7 +67,7 @@ for(let i =0; i< carts.length; i++){
 
 
 function onLoadCartNumbers(){
-    let productNumbers = localStorage.getItem('cartNumbers');
+    let productNumbers = localStorage.getItem('cartAmount');
 
     if(productNumbers){
         document.querySelector('.cart span').textContent() = productNumbers;
@@ -88,11 +88,11 @@ let cartItems = localStorage.getItem('productsInCart');
 cartItems= JSON.parse(cartItems);
 
 if(action == "decrease"){
-    localStorage.setItem('cartAmount', productNumbers-1);
-    document.querySelector('.cart span').textContent =  parseInt(productNumbers - 1);
+    localStorage.setItem('cartAmount', productNumbers - 1);
+    document.querySelector('.cart span').textContent = (productNumbers - 1);
 }else if(productNumbers){
 localStorage.setItem('cartAmount', productNumbers + 1);
-document.querySelector('.cart span').textContent = parseInt(productNumbers + 1);
+document.querySelector('.cart span').textContent = productNumbers + 1;
 
 }else{
     localStorage.setItem('cartAmount', 1);
@@ -170,9 +170,9 @@ function totalCost(product,action){
 //    let price = product.price;
 
 let cartCost = localStorage.getItem('totalCost');
- if(action == "descrease"){
+ if(action == "decrease"){
      cartCost = parseInt(cartCost);
-     localStorage.setItem('totalCost', cartCost - currentProduct.price);
+     localStorage.setItem('totalCost', cartCost - product.price);
  }
    else if(cartCost != null){
     cartCost = parseInt(cartCost);
@@ -234,7 +234,7 @@ if(cartItems && productContainer){
     `;
 
 }
-
+//hi
 deleteButtons();
 manageQty();
 
@@ -357,7 +357,7 @@ function manageQty(){
 
             
                 cartItems[currentProduct].inCart += 1;
-                cartAmount(  cartItems[currentProduct]);
+                cartAmount(cartItems[currentProduct]);
                 totalCost(cartItems[currentProduct]);
                 localStorage.setItem('productsInCart',JSON.stringify(cartItems));
                 displayCart();
@@ -502,8 +502,8 @@ comment_btn.addEventListener('click',function(event){
 // // ---end of shopping cart - not finished!
 
 //popup
-let popup = document.querySelector('.popup');
-let close = document.querySelector('#close');
+// let popup = document.querySelector('.popup');
+// let close = document.querySelector('#close');
 
 
 // //endPopup
