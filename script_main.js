@@ -11,7 +11,7 @@ let products= [{
     code:2,
     name:"faded hoodie",
     tag: "fadedhoodie",
-    img:"faded-hoodie.jpg",
+    img:"fadedhoodie.jpg",
     price: 49,
     inCart:0
        
@@ -255,6 +255,9 @@ for(let i=0; i<chosen_box.length;i++){
              product_page_img=products[j].img;
             product_page_name=products[j].name;
              product_page_price=products[j].price;
+            localStorage.setItem('product_page_img',JSON.stringify(product_page_img)); 
+            localStorage.setItem('product_page_name',JSON.stringify(product_page_name)); 
+            localStorage.setItem('product_page_price',JSON.stringify(product_page_price)); 
              
         }
     }
@@ -271,11 +274,19 @@ location.href="productPage.html";
 
 
 function onProductPageLoad(){
-    console.log("oded")
+    let picture=localStorage.getItem('product_page_img');
+    picture=JSON.parse(picture);
+    let namee=localStorage.getItem('product_page_name');
+   namee=JSON.parse(namee);
+    let pricee=localStorage.getItem('product_page_price');
+    pricee=JSON.parse(pricee);
+
+    console.log(pricee,picture,namee)
    // document.querySelector("#mainImg").src=img/product_page_img;
- document.querySelector('.productPrice').innerHTML=product_page_price;
-    document.querySelector('#mainImg').src=img/product_page_img;
-    document.querySelector('.proudact_title').innerHTML=product_page_name;
+ document.querySelector('.productPrice').innerHTML=pricee;
+    
+    document.querySelector('.proudact_title').innerHTML=namee;
+    document.querySelector('#mainImg').src="images/"+picture;
 }
 function deleteButtons(){
     let deleteButtons = document.querySelectorAll('.product i');
@@ -378,6 +389,17 @@ let line=document.querySelector('.line');
 
  });
 // ----end of hamburger menu --
+let comment_namee=document.querySelector('.name-input').values;
+let comment_text=document.querySelector('.comment_input').values;
+let comment_btn=document.querySelector('#add-comment');
+comment_btn.addEventListener('click',function(event){
+   event.preventDefault();
+    console.log(comment_namee)
+    console.log(comment_text)
+   document.querySelector('.added-comment .comment-name').innerHTML=comment_namee;
+   document.querySelector('.added-comment .comments-words').innerHTML=comment_text;
+   
+})
 
 // //  shopping cart popup
 //  let cartBtn = document.querySelector('#cart');
