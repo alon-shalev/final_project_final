@@ -56,7 +56,7 @@ let products= [{
 
 
 
-for(let i =0; i< carts.length; i++){
+for(let i =0; i<carts.length; i++){
     carts[i].addEventListener("click",() => {
         cartAmount( products[i]);
         totalCost(products[i]);
@@ -70,7 +70,7 @@ function onLoadCartNumbers(){
     let productNumbers = localStorage.getItem('cartAmount');
 
     if(productNumbers){
-        document.querySelector('.cart span').textContent() = productNumbers;
+        document.querySelector('.cart span').textContent = productNumbers;
 
     }
     
@@ -85,20 +85,37 @@ function cartAmount(product, action){
     productNumbers=parseInt(productNumbers);
     
 let cartItems = localStorage.getItem('productsInCart');
+//turn json object to js object
 cartItems= JSON.parse(cartItems);
 
 if(action == "decrease"){
     localStorage.setItem('cartAmount', productNumbers - 1);
+
     document.querySelector('.cart span').textContent = (productNumbers - 1);
 }else if(productNumbers){
 localStorage.setItem('cartAmount', productNumbers + 1);
 document.querySelector('.cart span').textContent = productNumbers + 1;
 
+    document.querySelector('.cart span').textContent =  productNumbers - 1;
+}else if(productNumbers){
+    localStorage.setItem("cartAmount",productNumbers + 1);
+    document.querySelector('.cart span').textContent =  productNumbers + 1;
+
+
 }else{
-    localStorage.setItem('cartAmount', 1);
-    document.querySelector('.cart span').textContent =parseInt(1);
+    localStorage.setItem('cartAmount',1);
+    document.querySelector('.cart span').textContent =  1;
 
 }
+// }else if(productNumbers){
+// localStorage.setItem('cartAmount', productNumbers + 1);
+// document.querySelector('.cart span').textContent = parseInt(productNumbers + 1);
+
+// }else{
+//     localStorage.setItem('cartAmount', 1);
+//     document.querySelector('.cart span').textContent =parseInt(1);
+
+// }
 
 
 //    if(productNumbers)  {
@@ -123,7 +140,7 @@ document.querySelector('.cart span').textContent = productNumbers + 1;
 // }
   
 // 
- 
+
 
 function setItems(product){
     
@@ -301,7 +318,7 @@ let productNumbers = localStorage.getItem('cartAmount');
                     deleteButtons[i].addEventListener("click", ()=> {
             //remove blank white space
                         productName=deleteButtons[i].parentElement.textContent.trim().toLowerCase().replace(/ /g,'');
-                        localStorage.setItem('cartAmount', productNumbers - cartItems[productName].inCart);
+                        localStorage.setItem('cartAmount',  productNumbers - cartItems[productName].inCart);
                         localStorage.setItem('totalCost',cartCost - (cartItems[productName].price * cartItems[productName].inCart) );
             delete cartItems[productName];
             localStorage.setItem('productsInCart',JSON.stringify(cartItems));
@@ -329,19 +346,29 @@ function manageQty(){
         decBtn[i].addEventListener('click',()=>{
             currentQty = decBtn[i].parentElement.querySelector('span').textContent;
             currentProduct = decBtn[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.trim().toLowerCase().replace(/ /g,'');
-            console.log(currentProduct);
-            console.log("dec");
-
-
-            if(cartItems[currentProduct].inCart > 1 && undefined ){
-                cartItems[currentProduct].inCart -=1;
-                cartAmount(cartItems[currentProduct],"decrease");
-                totalCost(cartItems[currentProduct], "decrease");
-                localStorage.setItem('productsInCart',JSON.stringify(cartItems));
-                displayCart();
-
-            }
            
+            if(cartItems[currentProduct].inCart >1 && undefined ){
+
+            
+            cartItems[currentProduct].inCart -= 1;
+            cartAmount(cartItems[currentProduct],"decrease");
+            
+
+                // cartAmount(cartItems[currentProduct],"decrease");
+                // totalCost(cartItems[currentProduct], "decrease");
+              
+               localStorage.setItem('productsInCart',JSON.stringify(cartItems));
+               displayCart();
+
+            // if(cartItems[currentProduct].inCart > 1 && undefined ){
+            //     cartItems[currentProduct].inCart -=1;
+            //     cartAmount(cartItems[currentProduct],"decrease");
+            //     totalCost(cartItems[currentProduct], "decrease");
+            //     localStorage.setItem('productsInCart',JSON.stringify(cartItems));
+            //     displayCart();
+
+            // }
+            }
 
         });
     }
@@ -353,16 +380,14 @@ function manageQty(){
             console.log("inc");
 
 
-            if( cartItems[currentProduct].inCart == undefined){
-
-            
+           
                 cartItems[currentProduct].inCart += 1;
                 cartAmount(cartItems[currentProduct]);
                 totalCost(cartItems[currentProduct]);
                 localStorage.setItem('productsInCart',JSON.stringify(cartItems));
                 displayCart();
             
-            }
+            
         });
     }
 
@@ -474,7 +499,8 @@ comment_btn.addEventListener('click',function(event){
 
 // =======
 // >>>>>>> f99fd56538e4147c60f1f46d65dd1cedd16ce463
-
+// let popup = document.querySelector('.popup');
+// let close = document.querySelector('#close');
 // function showPopUp(){
 //   let timelimit = 5 ;
 //   let i = 0;
@@ -506,15 +532,17 @@ comment_btn.addEventListener('click',function(event){
 // let close = document.querySelector('#close');
 
 
+
+
 // //endPopup
 
 
 
 let cartBtn = document.querySelector('#cart');
 let shopingCart = document.querySelector('.shopping_cart');
-let closeCartBtn = document.querySelector('.close-cart');
-let cartItemsAmount = document.querySelector('.cart_amount');
-cartBtn.addEventListener('click', function (event) {
+// let closeCartBtn = document.querySelector('.close-cart');
+// let cartItemsAmount = document.querySelector('.cart_amount');
+cartBtn.addEventListener("click",function(event){
     console.log("running")
 
   event.preventDefault();
@@ -537,3 +565,8 @@ cartBtn.addEventListener('click', function (event) {
 onLoadCartNumbers();
 displayCart();
 // comments
+
+
+
+
+// this is a comment from the future
