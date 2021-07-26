@@ -239,7 +239,24 @@ deleteButtons();
 manageQty();
 
 }
+let chosen_box=document.querySelectorAll('.photo-box img');
+let chosen_name=document.querySelectorAll('.photo-box .name');
+for(let i=0; i<chosen_box.length;i++){
+   
+    chosen_box[i].addEventListener('click',function(){
+        console.log(chosen_name[i].innerHTML)
+        for(let j=0 ; j<products.length ; j++){
+console.log(products[j].name)
+        if(products[j].name==chosen_name[i]){
+            let product_page_img=products[j].img;
+            let product_page_name=products[j].name;
+            let product_page_price=products[j].price;
+            console.log(product_page_img)
+        }
+    }
+    })
 
+}
 
 function deleteButtons(){
     let deleteButtons = document.querySelectorAll('.product i');
@@ -334,7 +351,7 @@ let secondLine =document.querySelector('.line-two');
 let thirdLine =document.querySelector('.line-three');
 let line=document.querySelector('.line');
 
- btn.addEventListener("click",function(event){
+ btn.addEventListener("click",function(_event){
      navMenu.classList.toggle("changeIt");
      firstLine.classList.toggle("changeIt");
      secondLine.classList.toggle("changeIt");
@@ -414,7 +431,7 @@ if(i == timelimit){
 console.log(i);
 },1000);  }
 
-close.addEventListener("click",function(event){
+close.addEventListener("click",function(_event){
   popup.classList.remove("show");
 });
 //eמגpopup
@@ -425,3 +442,5 @@ close.addEventListener("click",function(event){
 
 onLoadCartNumbers();
 displayCart();
+
+
