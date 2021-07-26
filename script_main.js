@@ -319,6 +319,8 @@ function manageQty(){
             currentQty = decBtn[i].parentElement.querySelector('span').textContent;
             currentProduct = decBtn[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.trim().toLowerCase().replace(/ /g,'');
             console.log(currentProduct);
+            console.log("dec");
+
 
             if(cartItems[currentProduct].inCart > 1 && undefined ){
                 cartItems[currentProduct].inCart -=1;
@@ -326,6 +328,7 @@ function manageQty(){
                 totalCost(cartItems[currentProduct], "decrease");
                 localStorage.setItem('productsInCart',JSON.stringify(cartItems));
                 displayCart();
+
             }
            
 
@@ -336,6 +339,7 @@ function manageQty(){
             currentQty = incBtn[i].parentElement.querySelector('span').textContent;
             currentProduct = incBtn[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.trim().toLowerCase().replace(/ /g,'');
             console.log(currentProduct);
+            console.log("inc");
 
 
             if( cartItems[currentProduct].inCart == undefined){
@@ -379,14 +383,14 @@ let line=document.querySelector('.line');
  });
 // ----end of hamburger menu --
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-// //popup
-// let popup = document.querySelector('.popup');
-// let close = document.querySelector('#close');
-=======
->>>>>>> Stashed changes
+// <<<<<<< Updated upstream
+// =======
+// <<<<<<< HEAD
+// // //popup
+// // let popup = document.querySelector('.popup');
+// // let close = document.querySelector('#close');
+// =======
+// >>>>>>> Stashed changes
 // //  shopping cart popup
 //  let cartBtn = document.querySelector('#cart');
 //  let shopingCart = document.querySelector('.shopping_cart');
@@ -407,21 +411,21 @@ let line=document.querySelector('.line');
 //  let productName=document.querySelector('.proudact_title').innerHTML;
 //  let productPrice=document.querySelector('.productPrice').innerHTML;
 
-<<<<<<< Updated upstream
+// <<<<<<< Updated upstream
 
 
 
-=======
->>>>>>> f99fd56538e4147c60f1f46d65dd1cedd16ce463
+// =======
+// >>>>>>> f99fd56538e4147c60f1f46d65dd1cedd16ce463
 
 // window.addEventListener("load",function(){
 //   showPopUp();
 // });
 
 
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
+// <<<<<<< HEAD
+// =======
+// >>>>>>> Stashed changes
 // let productTemplet=` <li>
 // <h3>${productName}</h3>
 // <div class="price">
@@ -435,12 +439,12 @@ let line=document.querySelector('.line');
 // let listOfP=document.querySelector('.proudact_list');
 //  listOfP.innerHTML+=productTemplet;
 //  console.log(productTemplet);
-<<<<<<< Updated upstream
+// <<<<<<< Updated upstream
 
 
 
-=======
->>>>>>> f99fd56538e4147c60f1f46d65dd1cedd16ce463
+// =======
+// >>>>>>> f99fd56538e4147c60f1f46d65dd1cedd16ce463
 
 // function showPopUp(){
 //   let timelimit = 5 ;
