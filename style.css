@@ -1333,17 +1333,59 @@ a .add-cart {
     background-color: white;
     position: absolute;
     border: 2px solid black;
+
     left: 80%;
     top: 110%;
     overflow-y: scroll;
+    overflow-x: scroll;
+
     max-height: 70vh;
+    max-width: 70vh;
+
+    color: #009845;
+    padding: 3%;
+    margin: auto;
+    justify-content: space-around;
 
 
+}
+
+
+#shopping .allProducts {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    color: #009845;
+    margin: 10px auto;
+    font-size: 12px;
 
 
 
 }
 
+#shopping .allProducts .total {
+
+
+    color: #009845;
+    padding: -1%;
+
+
+}
+
+#shopping {
+    color: #009845;
+
+}
+
+#shopping span {
+    color: #009845;
+
+}
+
+
+#shopping h5 {
+    font-size: 20px;
+}
 
 .shopping_cart.on {
     display: block;
@@ -1650,6 +1692,29 @@ a .add-cart {
 .cartTotal {
     width: 10%;
 }
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+
+
+
+
+/* -------categoty page ------- */
+
+.categotyTitle {
+    padding-top: 10%;
+    text-align: center;
+
+}
+
+
+.categotyTitle h1 {
+    text-align: center;
+    font-weight: 800;
+    color: #009845;
+    font-size: 50px;
+=======
+>>>>>>> Stashed changes
 /* comments*/
 .container {
 	width: 100%;
@@ -1698,4 +1763,8 @@ button.primaryContained:hover {
 }
 .row{
     width: 80%;
+<<<<<<< Updated upstream
+=======
+>>>>>>> f99fd56538e4147c60f1f46d65dd1cedd16ce463
+>>>>>>> Stashed changes
 }
