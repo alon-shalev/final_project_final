@@ -241,23 +241,42 @@ manageQty();
 }
 let chosen_box=document.querySelectorAll('.photo-box img');
 let chosen_name=document.querySelectorAll('.photo-box .name');
+let product_page_img;
+let product_page_name;
+let product_page_price;
 for(let i=0; i<chosen_box.length;i++){
    
     chosen_box[i].addEventListener('click',function(){
-        console.log(chosen_name[i].innerHTML)
+        
         for(let j=0 ; j<products.length ; j++){
-console.log(products[j].name)
-        if(products[j].name==chosen_name[i]){
-            let product_page_img=products[j].img;
-            let product_page_name=products[j].name;
-            let product_page_price=products[j].price;
-            console.log(product_page_img)
+
+
+        if(products[j].name==chosen_name[i].textContent){
+             product_page_img=products[j].img;
+            product_page_name=products[j].name;
+             product_page_price=products[j].price;
+             
         }
     }
+    
+   console.log(product_page_price)
+location.href="productPage.html";
+    
+   
+  
     })
-
+   
+   
 }
 
+
+function onProductPageLoad(){
+    console.log("oded")
+   // document.querySelector("#mainImg").src=img/product_page_img;
+ document.querySelector('.productPrice').innerHTML=product_page_price;
+    document.querySelector('#mainImg').src=img/product_page_img;
+    document.querySelector('.proudact_title').innerHTML=product_page_name;
+}
 function deleteButtons(){
     let deleteButtons = document.querySelectorAll('.product i');
 let productName;
@@ -360,53 +379,53 @@ let line=document.querySelector('.line');
  });
 // ----end of hamburger menu --
 
-//  shopping cart popup
- let cartBtn = document.querySelector('#cart');
- let shopingCart = document.querySelector('.shopping_cart');
- let closeCartBtn = document.querySelector('.close-cart');
- let cartItemsAmount = document.querySelector('.cart_amount');
- cartBtn.addEventListener('click', function (event) {
-   event.preventDefault();
-   shopingCart.classList.toggle('on');
+// //  shopping cart popup
+//  let cartBtn = document.querySelector('#cart');
+//  let shopingCart = document.querySelector('.shopping_cart');
+//  let closeCartBtn = document.querySelector('.close-cart');
+//  let cartItemsAmount = document.querySelector('.cart_amount');
+//  cartBtn.addEventListener('click', function (event) {
+//    event.preventDefault();
+//    shopingCart.classList.toggle('on');
  
  
- });
+//  });
 
 
 
- localStorage.setItem('products',JSON.stringify(product));
- let prodactImg=document.querySelector('img').src;//שליפה של התמונה
+//  localStorage.setItem('products',JSON.stringify(product));
+//  let prodactImg=document.querySelector('img').src;//שליפה של התמונה
  
- let productName=document.querySelector('.proudact_title').innerHTML;
- let productPrice=document.querySelector('.productPrice').innerHTML;
+//  let productName=document.querySelector('.proudact_title').innerHTML;
+//  let productPrice=document.querySelector('.productPrice').innerHTML;
 
 
 
 
-let productTemplet=` <li>
-<h3>${productName}</h3>
-<div class="price">
-   ${productPrice}
-</div>
-<img src=${prodactImg}>
-<div class="qtyP">
-   ${qty}
-</div>
-</li>`;
-let listOfP=document.querySelector('.proudact_list');
- listOfP.innerHTML+=productTemplet;
- console.log(productTemplet);
+// let productTemplet=` <li>
+// <h3>${productName}</h3>
+// <div class="price">
+//    ${productPrice}
+// </div>
+// <img src=${prodactImg}>
+// <div class="qtyP">
+//    ${qty}
+// </div>
+// </li>`;
+// let listOfP=document.querySelector('.proudact_list');
+//  listOfP.innerHTML+=productTemplet;
+//  console.log(productTemplet);
 
 
 
- // this function will check if current id appears in cart-its not finished!
- const buttons = document.querySelectorAll("button");
- buttons.forEach(function(button){
-   button.onclick = function(event){
-     console.log(event.target);
-   }
- });
-// ---end of shopping cart - not finished!
+//  // this function will check if current id appears in cart-its not finished!
+//  const buttons = document.querySelectorAll("button");
+//  buttons.forEach(function(button){
+//    button.onclick = function(event){
+//      console.log(event.target);
+//    }
+//  });
+// // ---end of shopping cart - not finished!
 
 //popup
 let popup = document.querySelector('.popup');
@@ -450,5 +469,4 @@ clicked.addEventListener("click", function(event){
 })
 onLoadCartNumbers();
 displayCart();
-
-
+// comments

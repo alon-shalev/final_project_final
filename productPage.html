@@ -16,10 +16,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <!-- Vue JS -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+<!-- jQuery -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
     <title>TIMFS</title>
 </head>
 
-<body>
+<body onload="onProductPageLoad()">
+    
     <header>
         <div class="AnnouncementBar">
             FREE SHIPING WORLD WIDE
@@ -101,7 +107,7 @@
                 href="file:///C:/Users/alon%20shalev/Desktop/full%20stuck/FP/final-project/index.html">HOME</a> / JEANS
         </p>
         <div class="gallery-main-img">
-            <div data-product-id="1">
+            
                 <img id="mainImg" src="images/overall.jpg">
 
                 <div id="thumb-img" onclick="changeImage(event)">
@@ -113,7 +119,7 @@
 
                     <img src="images/overall.jpg">
                 </div>
-            </div>
+            
         </div>
 
         <!-- <img src="jeans.jpg"> -->
@@ -121,7 +127,7 @@
             <h3 class="proudact_title">
                 TIMFS Dad Jean – Medium Wash Patchwork
             </h3>
-            <span class="productPrice">0</span>
+            <span class="productPrice">12</span>
 
             <p>
                 Or 4 interest-free installments of $19.75 by AFTERPAY
@@ -231,7 +237,7 @@
                 </div>
 
                 <div class="column">
-                    <img src="img3.jpg">
+                    <img src="images/img3.jpg">
 
 
                     <a href="images/instagra.com" class="author-row"><strong>fillters by </strong> @AlexDubli
@@ -272,6 +278,28 @@
     <div class="prodacts_list">
 
     </div>
+    <!--start comments-->
+    <section id="app">
+        <div class="container">
+            <ul>
+<li>the best website in the WORLD</li>
+            </ul>
+          <div class="row">
+            <div class="col-6">
+              <div class="comment">
+            <p v-for="items in item" v-text="items"></p>
+              </div><!--End Comment-->
+              </div><!--End col -->
+              </div><!-- End row -->
+          <div class="row">
+            <div class="col-6">
+          <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+              <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+            </div><!-- End col -->
+          </div><!--End Row -->
+        </div><!--End Container -->
+      </section><!-- end App -->
+    <!--end comments-->
     <footer>
         <div class="footer">
             <div class="top-footer">
@@ -319,7 +347,9 @@
 
                 </div>
             </div>
-
+ <!--end of comments sections-->
+ 
+                <!--end of comments sections-->
             <div class="BottomFooter">
                 <div class="footer-container">
 
