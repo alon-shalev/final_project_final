@@ -61,12 +61,12 @@ let listOfP=document.querySelector('.proudact_list');
 
 
   // this function will check if current id appears in cart-its not finished!
-  const buttons = document.querySelectorAll("button");
-  buttons.forEach(function(button){
-    button.onclick = function(event){
-      console.log(event.target);
-    }
-  });
+  // const buttons = document.querySelectorAll("button");
+  // buttons.forEach(function(button){
+  //   button.onclick = function(event){
+  //     console.log(event.target);
+  //   }
+  // });
 
 
 };

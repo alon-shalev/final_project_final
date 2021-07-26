@@ -330,6 +330,8 @@ function manageQty(){
             currentQty = decBtn[i].parentElement.querySelector('span').textContent;
             currentProduct = decBtn[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.trim().toLowerCase().replace(/ /g,'');
             console.log(currentProduct);
+            console.log("dec");
+
 
             if(cartItems[currentProduct].inCart > 1 && undefined ){
                 cartItems[currentProduct].inCart -=1;
@@ -337,6 +339,7 @@ function manageQty(){
                 totalCost(cartItems[currentProduct], "decrease");
                 localStorage.setItem('productsInCart',JSON.stringify(cartItems));
                 displayCart();
+
             }
            
 
@@ -347,6 +350,7 @@ function manageQty(){
             currentQty = incBtn[i].parentElement.querySelector('span').textContent;
             currentProduct = incBtn[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.trim().toLowerCase().replace(/ /g,'');
             console.log(currentProduct);
+            console.log("inc");
 
 
             if( cartItems[currentProduct].inCart == undefined){
@@ -390,6 +394,7 @@ let line=document.querySelector('.line');
  });
 // ----end of hamburger menu --
 
+
 let comment_btn=document.querySelector('#add-comment');
 let comment_namee;
 let comment_text;
@@ -404,6 +409,16 @@ comment_btn.addEventListener('click',function(event){
    document.querySelector('.added-comment .comments-words').innerHTML=comment_text;
    
 })
+
+
+// <<<<<<< Updated upstream
+// =======
+// <<<<<<< HEAD
+// // //popup
+// // let popup = document.querySelector('.popup');
+// // let close = document.querySelector('#close');
+// =======
+// >>>>>>> Stashed changes
 
 // //  shopping cart popup
 //  let cartBtn = document.querySelector('#cart');
@@ -425,9 +440,21 @@ comment_btn.addEventListener('click',function(event){
 //  let productName=document.querySelector('.proudact_title').innerHTML;
 //  let productPrice=document.querySelector('.productPrice').innerHTML;
 
+// <<<<<<< Updated upstream
 
 
 
+// =======
+// >>>>>>> f99fd56538e4147c60f1f46d65dd1cedd16ce463
+
+// window.addEventListener("load",function(){
+//   showPopUp();
+// });
+
+
+// <<<<<<< HEAD
+// =======
+// >>>>>>> Stashed changes
 // let productTemplet=` <li>
 // <h3>${productName}</h3>
 // <div class="price">
@@ -441,8 +468,29 @@ comment_btn.addEventListener('click',function(event){
 // let listOfP=document.querySelector('.proudact_list');
 //  listOfP.innerHTML+=productTemplet;
 //  console.log(productTemplet);
+// <<<<<<< Updated upstream
 
 
+
+// =======
+// >>>>>>> f99fd56538e4147c60f1f46d65dd1cedd16ce463
+
+// function showPopUp(){
+//   let timelimit = 5 ;
+//   let i = 0;
+
+// let timer = setInterval(function(){
+// i++;
+// if(i == timelimit){
+//   clearInterval(timer);
+//   popup.classList.add("show");
+// }
+// console.log(i);
+// },1000);  }
+
+// close.addEventListener("click",function(_event){
+//   popup.classList.remove("show");
+// });
 
 //  // this function will check if current id appears in cart-its not finished!
 //  const buttons = document.querySelectorAll("button");
@@ -457,29 +505,22 @@ comment_btn.addEventListener('click',function(event){
 let popup = document.querySelector('.popup');
 let close = document.querySelector('#close');
 
-window.addEventListener("load",function(){
-  showPopUp();
-});
+
+// //endPopup
 
 
 
-function showPopUp(){
-  let timelimit = 5 ;
-  let i = 0;
+let cartBtn = document.querySelector('#cart');
+let shopingCart = document.querySelector('.shopping_cart');
+let closeCartBtn = document.querySelector('.close-cart');
+let cartItemsAmount = document.querySelector('.cart_amount');
+cartBtn.addEventListener('click', function (event) {
+    console.log("running")
 
-let timer = setInterval(function(){
-i++;
-if(i == timelimit){
-  clearInterval(timer);
-  popup.classList.add("show");
-}
-console.log(i);
-},1000);  }
+  event.preventDefault();
+  shopingCart.classList.toggle('on');
 
-close.addEventListener("click",function(_event){
-  popup.classList.remove("show");
-});
-//eמגpopup
+})
 
 // // let switchImg = document.querySelectorAll('.box');
 // // imgThumb.addEventListener("click",changeImage());
@@ -487,12 +528,12 @@ close.addEventListener("click",function(_event){
 
 
 
-let clicked = document.querySelector('.photo-box h3');
+// let clicked = document.querySelector('.photo-box h3');
 
-clicked.addEventListener("click", function(event){
-    preventDefault();
-    console.log("cliecked");
-})
+// clicked.addEventListener("click", function(event){
+//     preventDefault();
+//     console.log("cliecked");
+// })
 onLoadCartNumbers();
 displayCart();
 // comments
