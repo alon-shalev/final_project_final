@@ -58,7 +58,7 @@ let products= [{
 
 for(let i =0; i<carts.length; i++){
     carts[i].addEventListener("click",() => {
-        cartAmount( products[i]);
+        cartAmount(products[i]);
         totalCost(products[i]);
      
 
@@ -96,7 +96,7 @@ if(action == "decrease"){
 localStorage.setItem('cartAmount', productNumbers + 1);
 document.querySelector('.cart span').textContent = productNumbers + 1;
 
-    document.querySelector('.cart span').textContent =  productNumbers - 1;
+    // document.querySelector('.cart span').textContent =  productNumbers - 1;
 }else if(productNumbers){
     localStorage.setItem("cartAmount",productNumbers + 1);
     document.querySelector('.cart span').textContent =  productNumbers + 1;
@@ -147,8 +147,8 @@ function setItems(product){
 
     let cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems);
-    console.log("hi");
-  if(cartItems != null){
+
+    if(cartItems != null){
       if(cartItems[product.tag] == undefined){
           cartItems = {
               ...cartItems,
@@ -346,7 +346,7 @@ function manageQty(){
         decBtn[i].addEventListener('click',()=>{
             currentQty = decBtn[i].parentElement.querySelector('span').textContent;
             currentProduct = decBtn[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.trim().toLowerCase().replace(/ /g,'');
-           
+           console.log(currentProduct);
             if(cartItems[currentProduct].inCart >1 && undefined ){
 
             
@@ -355,7 +355,7 @@ function manageQty(){
             
 
                 // cartAmount(cartItems[currentProduct],"decrease");
-                // totalCost(cartItems[currentProduct], "decrease");
+                totalCost(cartItems[currentProduct], "decrease");
               
                localStorage.setItem('productsInCart',JSON.stringify(cartItems));
                displayCart();
@@ -381,12 +381,12 @@ function manageQty(){
 
 
            
-                cartItems[currentProduct].inCart += 1;
+               cartItems[currentProduct].inCart += 1;
                 cartAmount(cartItems[currentProduct]);
                 totalCost(cartItems[currentProduct]);
                 localStorage.setItem('productsInCart',JSON.stringify(cartItems));
                 displayCart();
-            
+                
             
         });
     }
@@ -419,6 +419,17 @@ let line=document.querySelector('.line');
  });
 // ----end of hamburger menu --
 
+let cartBtn = document.querySelector('#cart');
+let shopingCart = document.querySelector('.shopping_cart');
+let closeCartBtn = document.querySelector('.close-cart');
+// let cartItemsAmount = document.querySelector('.cart_amount');
+cartBtn.addEventListener("click",function(event){
+    console.log("running");
+
+  event.preventDefault();
+  shopingCart.classList.toggle('on');
+
+});
 
 let comment_btn=document.querySelector('#add-comment');
 let comment_namee;
@@ -538,17 +549,6 @@ comment_btn.addEventListener('click',function(event){
 
 
 
-let cartBtn = document.querySelector('#cart');
-let shopingCart = document.querySelector('.shopping_cart');
-// let closeCartBtn = document.querySelector('.close-cart');
-// let cartItemsAmount = document.querySelector('.cart_amount');
-cartBtn.addEventListener("click",function(event){
-    console.log("running")
-
-  event.preventDefault();
-  shopingCart.classList.toggle('on');
-
-})
 
 // // let switchImg = document.querySelectorAll('.box');
 // // imgThumb.addEventListener("click",changeImage());
