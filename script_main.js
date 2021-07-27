@@ -42,7 +42,7 @@ let products= [{
     name: "miroor",
     img:"miroor.jpg",
     tag:"miroor",
-      price: 12,
+      price: 45,
      inCart: 0
 },{
     code:7,

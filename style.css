@@ -1824,7 +1824,7 @@ a .add-cart {
     font-size: 0.8rem;
     justify-content: space-evenly;
     position: absolute;
-    top: 140%;
+    bottom: -1%;
     left: 5%;
 
 
@@ -1841,7 +1841,7 @@ a .add-cart {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 25vw;
+    height: 20vw;
 
     overflow-y: auto;
 }
@@ -1849,7 +1849,7 @@ a .add-cart {
 .inputs {
     display: flex;
     flex-direction: column;
-
+margin-right: 10px;
 
 }
 
@@ -1877,6 +1877,7 @@ a .add-cart {
     background: #fff;
     border-radius: 8px;
     padding: 20px;
+    margin-top: 0;
 }
 
 .comment {
