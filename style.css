@@ -558,12 +558,16 @@ button {
 
 }
 
-.dots :hover {
+.dots :hover{
     width: 20px;
     height: 20px;
-    transition: 0.8s;
+    
 }
-
+.dots :active{
+    width: 20px;
+    height: 20px;
+    
+}
 @media screen and (max-width:1199px) {
 
     .best-sellers-pictures {

@@ -63,6 +63,7 @@ for (let i=0; i < carts.length; i++) {
     carts[i].addEventListener('click', () => {
         cartNumbers(products[i]);
         totalCost(products[i])
+        location.reload();
     })
 }
 
@@ -341,13 +342,32 @@ cartBtn.addEventListener("click",function(event){
 
 });
 
+// let popup = document.querySelector('.popup');
+// let close = document.querySelector('#close');
+// function showPopUp(){
+//   let timelimit = 5 ;
+//   let i = 0;
+
+// let timer = setInterval(function(){
+// i++;
+// if(i == timelimit){
+//   clearInterval(timer);
+//   popup.classList.add("show");
+// }
+// console.log(i);
+// },1000);  }
+
+// close.addEventListener("click",function(){
+//   popup.classList.remove("show");
+// });
+// window.addEventListener("load",function(){
+//       showPopUp();
+//     });
+
 
 
 onLoadCartNumbers();
 displayCart();
-
-
-
 let comment_btn=document.querySelector('#add-comment');
 let comment_namee;
 let comment_text;
@@ -362,3 +382,5 @@ comment_btn.addEventListener('click',function(event){
    document.querySelector('.added-comment .comments-words').innerHTML=comment_text;
    
 })
+
+
